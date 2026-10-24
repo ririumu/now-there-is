@@ -37,3 +37,5 @@
 - test/e2e: `tools/e2e.py` + `make e2e` を追加。公開サイトの目次→全リンク、各話の見出し/本文/前後ナビ/CSS、GitHub 上で描画された README の公開サイトリンクを実際に HTTP で辿って検証(全項目 PASS)。目視: GitHub のリポジトリページ、公開サイトの目次と最終話末尾(390px 幅)。
   目視で見つけた導線の穴を修正: リポジトリ About 欄が空 → description と homepage(公開 URL)を設定。README 目次表の空の列見出しを「話」に。
 - docs/all-rights-reserved: LICENSE(日英、All rights reserved)を追加。全ページのフッター・README に「Copyright © 2026 ririumu. All rights reserved.」。e2e に著作権表記と LICENSE の存在チェックを追加。
+- 後片付け: 書き換え前 commit を参照する Actions 実行記録 3 件と github-pages デプロイ記録 3 件を削除。古い commit 本体は SHA 直指定でまだ参照可能(完全削除は GitHub サポート案件)。
+- 原稿 gist へ 00_TITLE.md / 00_SYNOPSIS.md を fast-forward push(内容は公開サイト掲載済みのもの、gh トークンの gist スコープを利用)。`.gitmodules` を追加し source_data を正式なサブモジュール化。新規 `git clone --recursive` → `make build` で site/ に差分なしを確認。Actions の exit code 128 警告も解消。`make e2e` ALL PASSED。
