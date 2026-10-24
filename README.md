@@ -44,6 +44,12 @@ tools/gen.py   原稿 → site/*.html（python3 標準ライブラリのみ）
 site/          公開されるサイト（生成物もコミットする）
 ```
 
+取得:
+
+```
+git clone --recursive https://github.com/ririumu/novel-now-there-is-tomorrow.git
+```
+
 誤字脱字を直すとき:
 
 ```
@@ -53,6 +59,6 @@ make serve                  # http://localhost:8000 で確認
 git push                    # main への push で公開サイトに反映
 ```
 
-ビルドツールは使いません。`source_data/` は別リポジトリです。
+ビルドツールは使いません。`source_data/` は原稿の gist を指すサブモジュールです。原稿の修正はそちらにも commit・push してください。
 
 </details>
