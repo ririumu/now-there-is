@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""source_data/N.txt -> site/N.html, site/index.html (標準ライブラリのみ)"""
+"""manuscript/N.txt -> site/N.html, site/index.html (標準ライブラリのみ)"""
 import html, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "source_data"
+SRC = ROOT / "manuscript"
 OUT = ROOT / "site"
 
 BOOK = (SRC / "00_TITLE.md").read_text(encoding="utf-8").strip()

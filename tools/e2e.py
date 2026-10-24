@@ -5,7 +5,7 @@
 
 - 目次から全リンクを辿り、すべて HTTP 200 か
 - 各話: 見出し・本文・前/目次/次ナビが正しい話を指しているか
-- 目次の話数と字数表示が source_data と一致するか
+- 目次の話数と字数表示が manuscript と一致するか
 - GitHub 上の README の公開サイトへのリンクがすべて 200 か
 """
 import re, sys, urllib.request
@@ -15,7 +15,7 @@ from urllib.parse import urljoin
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://ririumu.github.io/novel-now-there-is-tomorrow/").rstrip("/") + "/"
 README_API = "https://api.github.com/repos/ririumu/novel-now-there-is-tomorrow/readme"
-SRC = Path(__file__).resolve().parent.parent / "source_data"
+SRC = Path(__file__).resolve().parent.parent / "manuscript"
 COPYRIGHT = "Copyright &copy; 2026 ririumu. All rights reserved."
 fails = []
 
