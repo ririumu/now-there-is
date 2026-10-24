@@ -5,10 +5,13 @@
 西暦二〇五〇年。AI の炎に焼かれた世界で、<br>
 弁護士・反橋聡太（四十）は、人生をやり直すために過去へ飛ぶ。
 
-* AIがない頃に憧れてみました。（著者コメント）
-
 **[▶ 小説を読む](https://ririumu.github.io/novel-now-there-is-tomorrow/)**
 
-</div>
+* AIがない頃に憧れてみました。（著者コメント）
 
-<p align="center"><sub>Copyright &copy; 2026 ririumu. All rights reserved.</sub></p>
+</div>
+<p align="center">
+<sub>
+Copyright &copy; 2026 ririumu. All rights reserved.
+</sub>
+</p>
