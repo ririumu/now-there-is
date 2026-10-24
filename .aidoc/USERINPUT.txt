@@ -18,3 +18,4 @@
 [Sat Oct 24 05:06:23 JST 2026] github pages として公開成功まで、やりきってください
 [Sat Oct 24 20:19:47 JST 2026] readme は user (=読者) ファーストであるべきです。 https://ririumu.github.io/novel-now-there-is-tomorrow/ への自然な動線になるよう、フルリライトしてください。
 [Sat Oct 24 20:21:29 JST 2026] push & e2e view test してください
+[Sat Oct 24 21:04:54 JST 2026] 当然やるでしょ　やりきって　- 「All rights reserved」を明示するには、今は LICENSE ファイルも README の著作権表記もありません。Copyright (c) 2026 ririumu. All rights reserved. 　全てを完了させて

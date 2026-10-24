@@ -16,6 +16,7 @@ from urllib.parse import urljoin
 BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://ririumu.github.io/novel-now-there-is-tomorrow/").rstrip("/") + "/"
 README_API = "https://api.github.com/repos/ririumu/novel-now-there-is-tomorrow/readme"
 SRC = Path(__file__).resolve().parent.parent / "source_data"
+COPYRIGHT = "Copyright &copy; 2026 ririumu. All rights reserved."
 fails = []
 
 
@@ -75,6 +76,7 @@ def main():
     check(idx.h1 == title, f"目次の題名 '{idx.h1}'")
     check(f"全{len(chapters)}話" in html, f"目次に「全{len(chapters)}話」")
     check("（完）" not in html, "目次にネタバレ用の本文が混ざっていない")
+    check(COPYRIGHT in html, "目次 著作権表記")
 
     seen = set()
     for href in idx.links:
@@ -98,12 +100,16 @@ def main():
         check((f"{n-1}.html" in pg.links) == (n > 1), f"第{n}話 前の話リンク")
         check((f"{n+1}.html" in pg.links) == (n < last), f"第{n}話 次の話リンク")
         check("style.css" in pg.links, f"第{n}話 スタイルシート")
+        check(COPYRIGHT in html, f"第{n}話 著作権表記")
 
     st, readme = get(README_API, "application/vnd.github.html")
     check(st == 200, f"README(GitHub 上の描画) -> {st}")
     rlinks = sorted(set(re.findall(r'href="(' + re.escape(BASE) + r'[^"]*)"', readme)))
     check(len(rlinks) >= len(chapters), f"README から公開サイトへのリンク {len(rlinks)} 件")
     check(f"{BASE}1.html" in rlinks, "README に「第1話から読む」リンク")
+    check("All rights reserved" in readme, "README 著作権表記")
+    st, _ = get("https://api.github.com/repos/ririumu/novel-now-there-is-tomorrow/contents/LICENSE")
+    check(st == 200, f"LICENSE -> {st}")
     for u in rlinks:
         st, _ = get(u)
         check(st == 200, f"README のリンク {u} -> {st}")

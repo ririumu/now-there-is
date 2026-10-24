@@ -23,6 +23,7 @@ PAGE = """<!DOCTYPE html>
 <main>
 {body}
 </main>
+<footer id="foot">Copyright &copy; 2026 ririumu. All rights reserved.</footer>
 </body>
 </html>
 """
