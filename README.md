@@ -29,6 +29,8 @@
 
 > AI がない頃に憧れてみました。　―― 作者
 
+<p align="center"><sub>Copyright &copy; 2026 ririumu. All rights reserved. 無断転載・複製・改変・再配布を禁じます（<a href="LICENSE">LICENSE</a>）。</sub></p>
+
 <br>
 
 <details>

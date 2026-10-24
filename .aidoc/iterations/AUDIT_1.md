@@ -36,3 +36,4 @@
 - docs/reader-first-readme: README を読者向けに全面書き直し(題名・一文あらすじ・「第1話から読む」リンク・公開サイトへの目次リンク・作者のことば)。保守手順は折りたたみ(details)に移動。
 - test/e2e: `tools/e2e.py` + `make e2e` を追加。公開サイトの目次→全リンク、各話の見出し/本文/前後ナビ/CSS、GitHub 上で描画された README の公開サイトリンクを実際に HTTP で辿って検証(全項目 PASS)。目視: GitHub のリポジトリページ、公開サイトの目次と最終話末尾(390px 幅)。
   目視で見つけた導線の穴を修正: リポジトリ About 欄が空 → description と homepage(公開 URL)を設定。README 目次表の空の列見出しを「話」に。
+- docs/all-rights-reserved: LICENSE(日英、All rights reserved)を追加。全ページのフッター・README に「Copyright © 2026 ririumu. All rights reserved.」。e2e に著作権表記と LICENSE の存在チェックを追加。
