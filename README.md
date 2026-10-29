@@ -7,8 +7,6 @@
 
 **[▶ 小説を読む](https://ririumu.github.io/now-there-is/)**
 
-* AIがない頃に憧れてみました。（著者コメント）
-
 </div>
 <p align="center">
 <sub>
